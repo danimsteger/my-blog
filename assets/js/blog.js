@@ -6,9 +6,7 @@ function back() {
 
 backButton.addEventListener("click", back);
 
-const blogList = document.querySelector("#blog-list");
-
-test();
+testAppend();
 
 /*
 const blogListEl = document.querySelector("#blog-list");
