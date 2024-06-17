@@ -3,16 +3,18 @@ const titleInput = document.querySelector("#title");
 const contentInput = document.querySelector("#content");
 const submitButton = document.querySelector("#submit");
 
+//Form inputs are stored locally in an object and then stringified when submit is clicked
 submitButton.addEventListener("click", function (event) {
   event.preventDefault();
-  const blogPost = {
+  const blogPostInfo = {
     username: usernameInput.value,
     title: titleInput.value,
     content: contentInput.value.trim(),
   };
-  localStorage.setItem("blogPost", JSON.stringify(blogPost));
 
-  blogs.push(blogPost);
+  localStorage.setItem("blogPostInfo", JSON.stringify(blogPostInfo));
+
+  blogs.push(blogPostInfo);
   usernameInput.value = "";
   titleInput.value = "";
   contentInput.value = "";
@@ -22,6 +24,7 @@ submitButton.addEventListener("click", function (event) {
   storeBlogs();
   /*  renderBlogs(); */
 
+  //Changes page to blog
   window.location.href = "./blog.html";
 });
 

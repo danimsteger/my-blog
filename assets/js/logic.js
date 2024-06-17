@@ -8,17 +8,48 @@ function testAppend() {
   blogList.appendChild(blog);
 }
 
-/* function renderBlogs() {
+/* let getBlogs = localStorage.getItem("blogs"); */
+
+function renderBlogs() {
+  storedBlogs = localStorage.getItem("blogs");
+  blogs = JSON.parse(storedBlogs);
+
   for (let i = 0; i < blogs.length; i++) {
-    const blog = blogs[i];
+    let blogPost = document.createElement("div");
+    blogPost.setAttribute("data-index", i);
 
-    const p = document.createElement("p");
-    (p.textContent = "hello:"), blog;
-    package.setAttribute("data-index", i);
+    blogList.appendChild(blogPost);
 
-    blogList.appendChild(p);
+    // const p = document.createElement("p");
+    // p.textContent = blog;
+    // p.setAttribute("data-index", i);
+
+    // blogList.appendChild(p);
+
+    // makePost();
   }
-} */
+}
+ makePost() {
+
+  const title = document.createElement("h2");
+  const lastTitle = JSON.parse(localStorage.getItem("title"));
+  title.textContent = lastTitle;
+
+  const content = document.createElement("p");
+  const lastContent = JSON.parse(localStorage.getItem("content"));
+  content.textContent = lastContent;
+
+  const username = document.createElement("p");
+  const lastUsername = JSON.parse(localStorage.getItem("username"));
+  username.textContent = lastUsername;
+
+  if (blogPost !== null) {
+    blogList.appendChild(blogPost);
+    blogPost.appendChild(title);
+    blogPost.appendChild(content);
+    blogPost.appendChild(username);
+  }
+}   */
 
 /* function renderBlogs() {
   for (let i = 0; i < blogs.length; i++) {

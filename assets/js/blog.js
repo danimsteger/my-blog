@@ -8,6 +8,10 @@ backButton.addEventListener("click", back);
 
 testAppend();
 
+renderBlogs();
+
+/* console.log(getBlogs); */
+
 /*
 const blogListEl = document.querySelector("#blog-list");
 
