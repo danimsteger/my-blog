@@ -18,38 +18,48 @@ function renderBlogs() {
     let blogPost = document.createElement("div");
     blogPost.setAttribute("data-index", i);
 
-    blogList.appendChild(blogPost);
+    let title = document.createElement("h2");
+    const lastTitle = blogs[i].username;
+    title.textContent = lastTitle;
+    title.setAttribute("data-index", i);
 
-    // const p = document.createElement("p");
-    // p.textContent = blog;
-    // p.setAttribute("data-index", i);
+    let content = document.createElement("p");
+    const lastContent = blogs[i].content;
+    content.textContent = lastContent;
+    content.setAttribute("data-index", i);
 
-    // blogList.appendChild(p);
+    let username = document.createElement("p");
+    const lastUsername = blogs[i].username;
+    username.textContent = "Posted by:" + lastUsername;
 
-    // makePost();
-  }
-}
- makePost() {
-
-  const title = document.createElement("h2");
-  const lastTitle = JSON.parse(localStorage.getItem("title"));
-  title.textContent = lastTitle;
-
-  const content = document.createElement("p");
-  const lastContent = JSON.parse(localStorage.getItem("content"));
-  content.textContent = lastContent;
-
-  const username = document.createElement("p");
-  const lastUsername = JSON.parse(localStorage.getItem("username"));
-  username.textContent = lastUsername;
-
-  if (blogPost !== null) {
     blogList.appendChild(blogPost);
     blogPost.appendChild(title);
     blogPost.appendChild(content);
     blogPost.appendChild(username);
   }
-}   */
+}
+
+//  makePost() {
+
+//   const title = document.createElement("h2");
+//   const lastTitle = JSON.parse(localStorage.getItem("title"));
+//   title.textContent = lastTitle;
+
+//   const content = document.createElement("p");
+//   const lastContent = JSON.parse(localStorage.getItem("content"));
+//   content.textContent = lastContent;
+
+//   const username = document.createElement("p");
+//   const lastUsername = JSON.parse(localStorage.getItem("username"));
+//   username.textContent = lastUsername;
+
+//   if (blogPost !== null) {
+//     blogList.appendChild(blogPost);
+//     blogPost.appendChild(title);
+//     blogPost.appendChild(content);
+//     blogPost.appendChild(username);
+//   }
+// }   */
 
 /* function renderBlogs() {
   for (let i = 0; i < blogs.length; i++) {
