@@ -1,3 +1,4 @@
+/* Custom Properties */
 :root {
   --color1: #cec9cc;
   --color2: #5d4e58;
@@ -6,6 +7,8 @@
   --color5: #f0c1c1;
   --color6: #d49090;
 }
+
+/* Universal */
 
 * {
   font-family: Georgia, "Times New Roman", Times, serif;
