@@ -17,7 +17,7 @@ function renderBlogs() {
 
     // Add h2 element with the title of that element in the array
     let title = document.createElement("h2");
-    const lastTitle = blogs[i].username;
+    const lastTitle = blogs[i].title;
     title.textContent = lastTitle;
     title.setAttribute("data-index", i);
     title.setAttribute("class", "title");
