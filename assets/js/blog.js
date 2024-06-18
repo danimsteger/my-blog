@@ -8,8 +8,6 @@ function back() {
 
 backButton.addEventListener("click", back);
 
-testAppend();
-
 renderBlogs();
 
 let mode = "light";

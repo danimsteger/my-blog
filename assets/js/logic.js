@@ -2,12 +2,6 @@ const blogList = document.querySelector("#blog-list");
 
 let blogs = [];
 
-function testAppend() {
-  const blog = document.createElement("h1");
-  blog.textContent = "hello";
-  blogList.appendChild(blog);
-}
-
 function renderBlogs() {
   storedBlogs = localStorage.getItem("blogs");
   blogs = JSON.parse(storedBlogs);
@@ -24,6 +18,7 @@ function renderBlogs() {
     title.setAttribute("class", "title");
 
     let titleLine = document.createElement("hr");
+    titleLine.setAttribute("class", "lines");
 
     let content = document.createElement("p");
     const lastContent = blogs[i].content;

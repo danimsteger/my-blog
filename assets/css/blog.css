@@ -1,11 +1,9 @@
 hr {
-  background-color: #5d4e58;
-  height: 2px;
-}
-
-.dark {
-  color: #cec9cc;
-  background-color: #5d4e58;
+  border: 2px solid var(--color2);
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .light {
@@ -13,13 +11,63 @@ hr {
   background-color: #cec9cc;
 }
 
+.dark {
+  color: #cec9cc;
+  background-color: #5d4e58;
+}
+.dark hr {
+  border: 2px solid var(--color1);
+  border-radius: 2px;
+}
+
 .entries {
   border: solid 3px;
+
   border-radius: 1rem;
+  margin: 1rem;
 }
 
 .title,
 .content,
 .username {
   margin-left: 15px;
+}
+header {
+  padding: 2rem;
+}
+
+h1 {
+  padding-bottom: 1rem;
+}
+
+.content {
+  margin-bottom: 0.5rem;
+}
+
+.username {
+  font-size: 10px;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  text-align: center;
+}
+
+#contact-info {
+  display: flex;
+  justify-content: center;
+}
+
+#contact-info a {
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 2px solid var(--color2);
+  border-radius: 5px;
+}
+
+.dark a {
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 2px solid var(--color1);
+  border-radius: 5px;
 }
