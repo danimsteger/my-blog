@@ -40,13 +40,18 @@ h1 {
   padding-bottom: 1rem;
 }
 
+.title {
+  margin-top: 1rem;
+}
 .content {
   margin-bottom: 0.5rem;
+  margin-left: 2rem;
 }
 
 .username {
   font-size: 10px;
   margin-bottom: 1rem;
+  padding-top: 0.5rem;
 }
 
 h4 {
@@ -58,11 +63,16 @@ h4 {
   justify-content: center;
 }
 
-#contact-info a {
+.light a,
+a:link,
+a:visited {
   margin: 1rem;
   padding: 0.5rem;
   border: 2px solid var(--color2);
   border-radius: 5px;
+  color: var(--color6);
+  text-decoration: none;
+  background-color: var(--color1);
 }
 
 .dark a {
@@ -70,4 +80,35 @@ h4 {
   padding: 0.5rem;
   border: 2px solid var(--color1);
   border-radius: 5px;
+  text-decoration: none;
+  color: var(--color5);
+  background-color: var(--color2);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.light #back {
+  background-color: var(--color2);
+  color: var(--color1);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid var(--color2);
+  border-radius: 5px;
+}
+
+.dark #back {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid var(--color2);
+  border-radius: 5px;
+  background-color: var(--color1);
+  color: var(--color2);
+}
+
+#theme-switcher {
+  font-size: 40px;
 }
