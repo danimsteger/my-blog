@@ -1,0 +1,17 @@
+:root {
+  --color1: #cec9cc;
+  --color2: #5d4e58;
+  --color3: #9d949a;
+  --color4: #6d5f68;
+}
+
+* {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: var(--color2);
+}

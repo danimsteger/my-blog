@@ -1,3 +1,8 @@
+hr {
+  background-color: #5d4e58;
+  height: 2px;
+}
+
 .dark {
   color: #cec9cc;
   background-color: #5d4e58;
@@ -6,4 +11,15 @@
 .light {
   color: #5d4e58;
   background-color: #cec9cc;
+}
+
+.entries {
+  border: solid 3px;
+  border-radius: 1rem;
+}
+
+.title,
+.content,
+.username {
+  margin-left: 15px;
 }

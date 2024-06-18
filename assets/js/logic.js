@@ -15,23 +15,30 @@ function renderBlogs() {
   for (let i = 0; i < blogs.length; i++) {
     let blogPost = document.createElement("div");
     blogPost.setAttribute("data-index", i);
+    blogPost.setAttribute("class", "entries");
 
     let title = document.createElement("h2");
     const lastTitle = blogs[i].username;
     title.textContent = lastTitle;
     title.setAttribute("data-index", i);
+    title.setAttribute("class", "title");
+
+    let titleLine = document.createElement("hr");
 
     let content = document.createElement("p");
     const lastContent = blogs[i].content;
     content.textContent = lastContent;
     content.setAttribute("data-index", i);
+    content.setAttribute("class", "content");
 
     let username = document.createElement("p");
     const lastUsername = blogs[i].username;
     username.textContent = "Posted by:" + lastUsername;
+    username.setAttribute("class", "username");
 
     blogList.appendChild(blogPost);
     blogPost.appendChild(title);
+    title.appendChild(titleLine);
     blogPost.appendChild(content);
     blogPost.appendChild(username);
   }
