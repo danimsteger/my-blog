@@ -5,6 +5,7 @@ const submitButton = document.querySelector("#submit");
 const themeSwitcher2 = document.querySelector("#theme-switcher2");
 const container = document.querySelector(".container");
 
+// Theme Switcher: switches theme from light to dark
 let mode = "light";
 
 themeSwitcher2.addEventListener("click", function () {
@@ -31,6 +32,7 @@ submitButton.addEventListener("click", function (event) {
     content: contentInput.value.trim(),
   };
 
+  // Checks if all fields have been filled out before submitting.
   function validateForm() {
     if (usernameInput.value == "" || usernameInput.value == null) {
       alert("Username must be filled out to submit. Please try again.");
@@ -42,23 +44,24 @@ submitButton.addEventListener("click", function (event) {
       alert("Blog content must be filled out to submit.  Please try again.");
       return false;
     } else {
+      // Stringifies the blogPostInfo object and stores it locally
       localStorage.setItem("blogPostInfo", JSON.stringify(blogPostInfo));
 
+      // Takes locally stored blogPostInfo string and pushes it to blogs array (found in logic.js)
       blogs.push(blogPostInfo);
       usernameInput.value = "";
       titleInput.value = "";
       contentInput.value = "";
 
-      console.log(blogs);
-
+      // Calls storeBlogs function found in logic.js to locally store the blogs array as a string
       storeBlogs();
-      /*  renderBlogs(); */
 
-      //Changes page to blog
+      // Changes page to blog
       window.location.href = "./blog.html";
     }
   }
   validateForm();
 });
 
+// Calls init function found in logic.js to parse the blogs array from local storage.
 init();
