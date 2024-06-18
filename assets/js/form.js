@@ -2,6 +2,24 @@ const usernameInput = document.querySelector("#username");
 const titleInput = document.querySelector("#title");
 const contentInput = document.querySelector("#content");
 const submitButton = document.querySelector("#submit");
+const themeSwitcher2 = document.querySelector("#theme-switcher2");
+const container = document.querySelector(".container");
+
+let mode = "light";
+
+themeSwitcher2.addEventListener("click", function () {
+  if (mode === "light") {
+    mode = "dark";
+    container.setAttribute("class", "dark");
+    console.log("we are switching to dark mode");
+    themeSwitcher2.textContent = "🌝";
+  } else {
+    mode = "light";
+    container.setAttribute("class", "light");
+    console.log("we are switching to light mode");
+    themeSwitcher2.textContent = "🌚";
+  }
+});
 
 //Form inputs are stored locally in an object and then stringified when submit is clicked
 submitButton.addEventListener("click", function (event) {

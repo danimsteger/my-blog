@@ -8,6 +8,21 @@ header {
   text-align: center;
   padding: 5rem;
   margin-top: 5rem;
+  padding-bottom: 2.5rem;
+}
+
+.dark {
+  background-color: var(--color2);
+  color: var(--color1);
+}
+
+.dark label {
+  color: var(--color1);
+}
+
+.dark header {
+  background-color: var(--color1);
+  color: var(--color2);
 }
 
 h2 {
@@ -15,6 +30,10 @@ h2 {
   color: var(--color4);
   margin-top: 4rem;
   margin-bottom: 2rem;
+}
+
+.dark h2 {
+  color: var(--color3);
 }
 
 #blog-entries {
@@ -37,10 +56,12 @@ h2 {
 #username {
   height: 30px;
 }
+
 label {
   margin-bottom: 0px;
   font-weight: bold;
   color: var(--color2);
+  font-size: 1.25rem;
 }
 
 #submit {
@@ -54,8 +75,24 @@ label {
   font-size: 20px;
 }
 
+.dark #submit {
+  background-color: var(--color3);
+  color: var(--color2);
+  border: 5px solid var(--color4);
+  border-radius: 4px;
+}
+
 #submit:hover {
   border-color: var(--color1);
   background-color: var(--color4);
   color: var(--color1);
+}
+
+.theme-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#theme-switcher2 {
+  font-size: 40px;
 }
